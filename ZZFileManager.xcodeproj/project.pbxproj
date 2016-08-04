@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184726691D5369EB00F4A219 /* zhuoku050.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 184726681D5369EB00F4A219 /* zhuoku050.jpg */; };
 		93C7826B1D5313A100C9A132 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C7826A1D5313A100C9A132 /* main.m */; };
 		93C7826E1D5313A100C9A132 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C7826D1D5313A100C9A132 /* AppDelegate.m */; };
 		93C782711D5313A100C9A132 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C782701D5313A100C9A132 /* ViewController.m */; };
@@ -15,6 +16,7 @@
 		93C782791D5313A100C9A132 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C782771D5313A100C9A132 /* LaunchScreen.storyboard */; };
 		93C782841D5313A100C9A132 /* ZZFileManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C782831D5313A100C9A132 /* ZZFileManagerTests.m */; };
 		93C7828F1D5313A100C9A132 /* ZZFileManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C7828E1D5313A100C9A132 /* ZZFileManagerUITests.m */; };
+		93C782DE1D531B7B00C9A132 /* ZZFileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C782DD1D531B7B00C9A132 /* ZZFileCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		184726681D5369EB00F4A219 /* zhuoku050.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zhuoku050.jpg; sourceTree = "<group>"; };
 		93C782661D5313A100C9A132 /* ZZFileManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZFileManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C7826A1D5313A100C9A132 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		93C7826C1D5313A100C9A132 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +54,8 @@
 		93C7828A1D5313A100C9A132 /* ZZFileManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZZFileManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C7828E1D5313A100C9A132 /* ZZFileManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZFileManagerUITests.m; sourceTree = "<group>"; };
 		93C782901D5313A100C9A132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93C782DC1D531B7B00C9A132 /* ZZFileCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZFileCache.h; sourceTree = "<group>"; };
+		93C782DD1D531B7B00C9A132 /* ZZFileCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZFileCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		184726671D53689000F4A219 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				184726681D5369EB00F4A219 /* zhuoku050.jpg */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		93C7825D1D5313A000C9A132 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +114,8 @@
 		93C782681D5313A100C9A132 /* ZZFileManager */ = {
 			isa = PBXGroup;
 			children = (
+				184726671D53689000F4A219 /* Resources */,
+				93C7829C1D5313D200C9A132 /* ZZFileManager */,
 				93C7826C1D5313A100C9A132 /* AppDelegate.h */,
 				93C7826D1D5313A100C9A132 /* AppDelegate.m */,
 				93C7826F1D5313A100C9A132 /* ViewController.h */,
@@ -138,6 +153,15 @@
 				93C782901D5313A100C9A132 /* Info.plist */,
 			);
 			path = ZZFileManagerUITests;
+			sourceTree = "<group>";
+		};
+		93C7829C1D5313D200C9A132 /* ZZFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				93C782DC1D531B7B00C9A132 /* ZZFileCache.h */,
+				93C782DD1D531B7B00C9A132 /* ZZFileCache.m */,
+			);
+			path = ZZFileManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +270,7 @@
 				93C782791D5313A100C9A132 /* LaunchScreen.storyboard in Resources */,
 				93C782761D5313A100C9A132 /* Assets.xcassets in Resources */,
 				93C782741D5313A100C9A132 /* Main.storyboard in Resources */,
+				184726691D5369EB00F4A219 /* zhuoku050.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93C782DE1D531B7B00C9A132 /* ZZFileCache.m in Sources */,
 				93C782711D5313A100C9A132 /* ViewController.m in Sources */,
 				93C7826E1D5313A100C9A132 /* AppDelegate.m in Sources */,
 				93C7826B1D5313A100C9A132 /* main.m in Sources */,
@@ -498,6 +524,7 @@
 				93C782951D5313A100C9A132 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93C782961D5313A100C9A132 /* Build configuration list for PBXNativeTarget "ZZFileManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +533,7 @@
 				93C782981D5313A100C9A132 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93C782991D5313A100C9A132 /* Build configuration list for PBXNativeTarget "ZZFileManagerUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +542,7 @@
 				93C7829B1D5313A100C9A132 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
