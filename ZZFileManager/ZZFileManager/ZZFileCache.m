@@ -398,5 +398,39 @@ static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24 * 7; // 1 week
     });
 }
 
+#pragma mark - Disk File Cache
+- (BOOL)cacheDiskFileFromPath:(NSString *)path key:(NSString *)key cut:(BOOL)cut {
+    NSString *toPath = [self defaultCachePathForKey:key];
+    if ([_fileManager fileExistsAtPath:toPath]) {
+        return NO;
+    }
+    BOOL result = NO;
+    if (cut) {
+        result = [_fileManager moveItemAtPath:path toPath:toPath error:nil];
+    } else {
+        result = [_fileManager copyItemAtPath:path toPath:toPath error:nil];
+    }
+    return result;
+}
+
+- (void)cacheDiskFileFromPath:(NSString *)path key:(NSString *)key cut:(BOOL)cut completion:(ZZFileManagerStoreCompletedBlock)completion {
+    __weak typeof(self) weakSelf = self;
+    dispatch_async(self.ioQueue, ^{
+        __strong __typeof(weakSelf) strongSelf = weakSelf;
+        if ([strongSelf cacheDiskFileFromPath:path key:key cut:cut]) {
+            if (completion) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion([self defaultCachePathForKey:key]);
+                });
+            }
+        } else {
+            if (completion) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(nil);
+                });
+            }
+        }
+    });
+}
 
 @end

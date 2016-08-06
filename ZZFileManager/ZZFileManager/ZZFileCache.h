@@ -175,6 +175,24 @@ typedef void(^ZZFileManagerNoParamsBlock)();
  *  @return 缓存文件路径，如果为nil，则表示没有缓存
  */
 - (NSString *)defaultCachePathForKey:(NSString *)key;
-
+/**
+ *  同步将磁盘已有文件移至缓存框架管理
+ *
+ *  @param path 要移动的文件路径
+ *  @param key  唯一的key值
+ *  @param cut  yes剪切，no复制
+ *
+ *  @return 返回是否成功，失败原因可能为目标路径文件已存在等
+ */
+- (BOOL)cacheDiskFileFromPath:(NSString *)path key:(NSString *)key cut:(BOOL)cut;
+/**
+ *  异步将磁盘已有文件移至缓存框架管理
+ *
+ *  @param path       要移动的文件路径
+ *  @param key        唯一的key值
+ *  @param cut        yes剪切，no复制
+ *  @param completion 回调，返回目标路径
+ */
+- (void)cacheDiskFileFromPath:(NSString *)path key:(NSString *)key cut:(BOOL)cut completion:(ZZFileManagerStoreCompletedBlock)completion;
 
 @end
